@@ -5,7 +5,6 @@ import { MeetingService } from 'src/app/service/meeting.service';
 import { DeleteComponent } from '../delete/delete.component';
 import { MeetingFormComponent } from '../meeting-form/meeting-form.component';
 import * as moment from 'moment';
-import { ViewComponent } from '../view/view.component';
 
 @Component({
   selector: 'app-meeting-list',
@@ -67,7 +66,7 @@ export class MeetingListComponent implements OnInit {
 
   confirmDelete(id:number) {
     const dialogRef = this.dialog.open(DeleteComponent, {
-      width: '500px',
+     
       data : id
     });
 
@@ -78,8 +77,7 @@ export class MeetingListComponent implements OnInit {
 
   edit(idEdit:string) {
     const dialogRef = this.dialog.open(MeetingFormComponent, {
-      width: '500px',
-      data : idEdit
+     data : idEdit
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -87,10 +85,5 @@ export class MeetingListComponent implements OnInit {
     });
   }
 
-  view(idView:string) {
-    const dialogRef = this.dialog.open(ViewComponent, {
-      width: '1500px',
-      data : idView
-    });
-  }
+
 }

@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DeleteComponent } from './components/delete/delete.component';
 import { LocalDateTimePipe } from './pipe/local-date-time.pipe';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,7 +26,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatSelectModule} from '@angular/material/select';
-import { ViewComponent } from './components/view/view.component';
+import { NovoComponent } from './components/novo/novo.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ViewComponent } from './components/view/view.component';
     MeetingFormComponent,
     DeleteComponent,
     LocalDateTimePipe,
-    ViewComponent
+    NovoComponent,
+    
   ],
   imports: [
     HttpClientModule,
@@ -54,7 +56,8 @@ import { ViewComponent } from './components/view/view.component';
     FormsModule,
     ReactiveFormsModule,
     MatPaginatorModule,
-    MatSelectModule
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [
     LocalDateTimePipe
